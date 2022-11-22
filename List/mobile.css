@@ -1,0 +1,98 @@
+@media only screen and (max-width:480px) 
+{ 
+  
+.list {
+    /*card*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+    background-color: #54acfe53;
+  }
+  
+  .innerCard {
+    padding: 2px 16px;
+  }
+
+  .addBtn {
+    padding: 5px;
+    width: 10%;
+    background: #54acfe;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+
+  .closeTask{
+    float:right;
+    cursor: pointer;
+    padding: 5px;
+    width: 8%;
+    background: #54acfe;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .closeList{
+    cursor: pointer;
+    float:right;
+    padding: 5px;
+    width: 8%;
+    background: #54acfe;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  #lowPrio {
+    color: green
+  }
+
+  #mediumPrio {
+    color: goldenrod;
+  }
+
+  #highPrio {
+    color: red
+  }
+
+  @media screen and (max-width: 480) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  .row {margin: 0 -5px;}
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .newListCollapse {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .collapsible {
+    padding: 5px;
+    width: 8%;
+    background: #54acfe;
+    text-align: center;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  .filterBar {
+    text-align: center;
+    padding: 15px;
+  }
+}

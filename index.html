@@ -3,7 +3,10 @@
 <head>
     <title>To-Done List Maker</title>
     <link rel = "stylesheet" href="styles.css">
-    <link rel = "stylesheet" href="listStyles.css">
+    <link rel = "stylesheet" href="List/desktop.css" media="screen and (min-width:769px)">
+    <link rel = "stylesheet" href="List/mobile.css" media="screen and (max-width:480px)">
+    <link rel = "stylesheet" href="List/tablet.css" media="screen and (min-width:481px) 
+    and (max-width:768px)">
 </head>
 <header>
     <div class="container">
@@ -19,7 +22,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="signUp.html">Sign Up</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
@@ -27,7 +30,7 @@
 </header>
 <body>
 
-    <h2>My Lists</h2>
+    <h2 class="pageTitle">My Lists</h2>
 
     <div class="newListCollapse">
         <button type="button" class="collapsible">New List</button>
@@ -37,31 +40,39 @@
         </form>
         </div>
     </div>
+    <div class="filterBar">
+        <label for="filter">Filter By:</label>
+        <select name="filter" id="filter">
+        <option value="byPrio">Priority</option>
+        <option value="byDate">Due Date</option>
+        </select>
+    </div>
     
-    <label for="filter">Filter By:</label>
-    <select name="filter" id="filter">
-    <option value="byPrio">Priority</option>
-    <option value="byDate">Due Date</option>
-    </select>
     <div class="row">
         <div class="column">
             <div class="list">
-                <h3 class="listTitle">Chores</h3>
                 <span onclick="" class="closeList">X</span>
+                <h3 class="listTitle">Chores</h3>
                 <div>
-                    <form>
+                    <form class="newTask">
                         <h4>Add New Task</h4>
-                        <label for="taskName">Name:</label>
+                        <div class="formField">
+                            <label for="taskName">Name:</label>
                             <input type="text" id="taskName" name="taskName" placeholder="Task...">
-                        <label for="dueDate">Due Date:</label>
-                            <input type="date" id="dueDate" name="dueDate">
-                        <p>Priority Level:</p>
+                        </div>
+                        <div class="formField">
+                           <label for="dueDate">Due Date:</label>
+                            <input type="date" id="dueDate" name="dueDate"> 
+                        </div>
+                        <div class="formField">
+                          <p>Priority Level:</p>
                         <label for="highPrio">High</label>
                             <input type="checkbox" id="highPrio" name="highPrio">
                         <label for="mediumPrio">Medium</label>
                             <input type="checkbox" id="mediumPrio" name="mediumPrio">
                         <label for="lowPrio">Low</label>
-                            <input type="checkbox" id="lowPrio" name="lowPrio">
+                            <input type="checkbox" id="lowPrio" name="lowPrio">  
+                        </div>
                         <span onclick="" class="addBtn">Add</span>
                     </form>
                 </div>    
@@ -69,16 +80,17 @@
                     <ul class="myUL" >
                         <li>
                             <h4 class="taskTitle">Do the dishes</h4>
+                            <span onclick="" class="closeTask">X</span>
                             <p>Due: 11/23/2022</p>
                             <p id="mediumPrio">Medium Priority</p>
-                            <span onclick="" class="closeTask">X</span>
+                            
                         </li>
             
                         <li>
                             <h4 class="taskTitle">Buy toliet paper</h4>
+                            <span onclick="" class="closeTask">X</span>
                             <p>Due: 11/23/2022</p>
                             <p id="mediumPrio">Medium Priority</p>
-                            <span onclick="" class="closeTask">X</span>
                         </li>
                     </ul>
                 </div>
@@ -86,36 +98,42 @@
         </div>  
         <div class="column">
             <div class="list">
-                <h3 class="listTitle">Homework</h3>
                 <span onclick="" class="closeList">X</span>
-                <form>
+                <h3 class="listTitle">Homework</h3>
+                <form class="newTask">
                     <h4>Add New Task</h4>
-                    <label for="taskName">Name:</label>
-                    <input type="text" id="taskName" name="taskName" placeholder="Task...">
-                    <label for="dueDate">Due Date:</label>
-                        <input type="date" id="dueDate" name="dueDate">
-                    <p>Priority Level:</p>
+                    <div class="formField">
+                        <label for="taskName">Name:</label>
+                        <input type="text" id="taskName" name="taskName" placeholder="Task...">
+                    </div>
+                    <div class="formField">
+                       <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate"> 
+                    </div>
+                    <div class="formField">
+                      <p>Priority Level:</p>
                     <label for="highPrio">High</label>
                         <input type="checkbox" id="highPrio" name="highPrio">
                     <label for="mediumPrio">Medium</label>
                         <input type="checkbox" id="mediumPrio" name="mediumPrio">
                     <label for="lowPrio">Low</label>
-                        <input type="checkbox" id="lowPrio" name="lowPrio">
+                        <input type="checkbox" id="lowPrio" name="lowPrio">  
+                    </div>
                     <span onclick="" class="addBtn">Add</span>
                 </form>
                 <div class="innerCard">
                 <ul class="myUL" >
                         <li>
                             <h4 class="taskTitle">Cs 146 Assignment</h4>
+                            <span onclick="" class="closeTask">X</span>
                             <p>Due: 11/22/2022</p>
                             <p id="highPrio">High Priority</p>
-                            <span onclick="" class="closeTask">X</span>
                         </li>
                         <li>
                             <h4 class="taskTitle">Study for final</h4>
+                            <span onclick="" class="closeTask">X</span>
                             <p>Due: 12/12/2022</p>
                             <p id="lowPrio">Low Priority</p>
-                            <span onclick="" class="closeTask">X</span>
                         </li>
                     </ul> 
                 </div>
@@ -123,30 +141,36 @@
         </div>
         <div class="column">  
             <div class="list">
-                <h3 class="listTitle">Misc</h3>
                 <span onclick="" class="closeList">X</span>
-                <form>
+                <h3 class="listTitle">Misc</h3>
+                <form class="newTask">
                     <h4>Add New Task</h4>
-                    <label for="taskName">Name:</label>
-                    <input type="text" id="taskName" name="taskName" placeholder="Task...">
-                    <label for="dueDate">Due Date:</label>
-                        <input type="date" id="dueDate" name="dueDate">
-                    <p>Priority Level:</p>
+                    <div class="formField">
+                        <label for="taskName">Name:</label>
+                        <input type="text" id="taskName" name="taskName" placeholder="Task...">
+                    </div>
+                    <div class="formField">
+                       <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate"> 
+                    </div>
+                    <div class="formField">
+                      <p>Priority Level:</p>
                     <label for="highPrio">High</label>
                         <input type="checkbox" id="highPrio" name="highPrio">
                     <label for="mediumPrio">Medium</label>
                         <input type="checkbox" id="mediumPrio" name="mediumPrio">
                     <label for="lowPrio">Low</label>
-                        <input type="checkbox" id="lowPrio" name="lowPrio">
+                        <input type="checkbox" id="lowPrio" name="lowPrio">  
+                    </div>
                     <span onclick="" class="addBtn">Add</span>
                 </form>
                 <div class="innerCard">
                     <ul class="myUL" >
                         <li>
                             <h4 class="taskTitle">Call Mom</h4>
+                            <span onclick="" class="closeTask">X</span>
                             <p>Due: 11/24/2022</p>
                             <p id="lowPrio">Low Priority</p>
-                            <span onclick="" class="closeTask">X</span>
                         </li>
                     </ul>
                 </div>

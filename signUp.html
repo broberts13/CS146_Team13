@@ -2,29 +2,52 @@
 <html>
 <head>
     <title>To-Done List Maker - Sign Up</title>
-    <link rel = "stylesheet" href="signUp\styles.css">
+    <link rel = "stylesheet" href="styles.css" >
+    <link rel = "stylesheet" href="signUp/desktop.css" media="screen and (min-width:769px)">
+    <link rel = "stylesheet" href="signUp/mobile.css" media="screen and (max-width:480px)">
+    <link rel = "stylesheet" href="signUp/tablet.css" media="screen and (min-width:481px) 
+    and (max-width:768px)">
 </head>
 <header>
-    <h1>To-Done List Maker</h1>
-    <hav>
-        <a href="index.html">Home</a> |
-        <a href="signUp.html">Sign Up</a> |
-        <a href="login.html">Log In</a>
-
-    </hav>
+    <div class="container">
+        <div class="image">
+            <h1>To-Done List Maker</h1>
+        </div>
+        <div class="text">
+           <!-- <img class ="signIn" src="https://static.vecteezy.com/system/resources/thumbnails/007/407/996/small/user-icon-person-icon-client-symbol-login-head-sign-icon-design-vector.jpg" alt = "signIN" usemap="#workmap"> -->
+            <map name="workmap">
+                <area shape="rect" coords="34, 44, 270, 350" href="login.html">
+            </map>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signUp.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
 </header>
 <body>
     <div>
-        <form>
-            <h4>Sign Up</h4>
-            <label for="email">Email:</label>
-                <input type="text" id="email" placeholder="Email">
-            <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Username">
-            <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Password">
-            <input type="submit">
-        </form>
+        <h2 class="pageTitle">Sign Up</h2>
+        <div class="card">
+            <form>
+                <div class="formField">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="Email"> 
+                </div>
+                <div class="formField">
+                <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Username"> 
+                </div>
+                <div class="formField">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <input type="submit">
+            </form>  
+        </div>
     </div>
 </body>
 </html>

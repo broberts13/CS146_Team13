@@ -58,3 +58,13 @@ nav a {
   font-size: 20px;
   padding-left: 20px;
 }
+
+.pageTitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.formField {
+  padding: 3px;
+}

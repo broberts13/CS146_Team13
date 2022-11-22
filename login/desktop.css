@@ -1,0 +1,20 @@
+@media only screen and (min-width: 769px) 
+{ 
+    .card {
+        /*card*/
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 30px;
+        background-color: #54acfe53;
+        width: 50%;
+        align-self: center;
+        position: relative;
+        margin: auto;
+
+    }
+
+    form {
+        text-align: center;
+        align-items: center;
+    }
+
+}
