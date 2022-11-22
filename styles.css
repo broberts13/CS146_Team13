@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 7;
+}
+
+body {
+  background-color: #EEB787;
+}
+
+header {
+  background-color: green;
+  font-size: 21px;
+}
