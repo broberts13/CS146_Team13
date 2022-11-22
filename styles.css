@@ -4,14 +4,13 @@
 }
 
 body {
-  background-color: #EEB787;
+  background-color: #fff8f2;
 }
 
 header {
-  background-color: #FF0000;
+  background-color: #7acafb;
   font-size: 21px;
 }
-
 
 .signIn {
   display: square;
