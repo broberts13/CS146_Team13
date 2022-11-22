@@ -16,80 +16,101 @@
 <body>
 
 <h2> Welcome, User </h2>
-<div>
-    <form>
-        <h4>Add New Task</h4>
-        <input type="text" id="myInput" placeholder="Task...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-    </form>
+
+<h2>My Lists</h2>
+
+<button type="button" class="collapsible">New List</button>
+<div class="content">
+  <form>
+    "use javascript for collapsible form here"
+  </form>
 </div>
 
 <div>
-    <h3>My To-Do List</h3>
+    <h3>Chores</h3>
+    <form>
+        <h4>Add New Task</h4>
+            <input type="text" id="myInput" placeholder="Task...">
+        <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+        <p>Priority Level:</p>
+        <label for="highPrio">High</label>
+            <input type="checkbox" id="highPrio" name="highPrio">
+        <label for="mediumPrio">Medium</label>
+            <input type="checkbox" id="mediumPrio" name="mediumPrio">
+        <label for="lowPrio">Low</label>
+            <input type="checkbox" id="lowPrio" name="lowPrio">
+        <span onclick="" class="addBtn">Add</span>
+    </form>
     <ul class="myUL" >
-        <li>CS 146 Homework</li>
-        <li>Call Mom</li>
-        <li>Study for midterm</li>
-        <li>Do the dishes</li>
+        <li>
+            <h4>Do the dishes</h4>
+            <p>Due: 11/23/2022</p>
+            <p>Medium Priority</p>
+        </li>
+
+        <li>
+            <h4>Do the dishes</h4>
+            <p>Due: 11/23/2022</p>
+            <p>Medium Priority</p>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3>Homework</h3>
+    <form>
+        <h4>Add New Task</h4>
+            <input type="text" id="myInput" placeholder="Task...">
+        <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+        <p>Priority Level:</p>
+        <label for="highPrio">High</label>
+            <input type="checkbox" id="highPrio" name="highPrio">
+        <label for="mediumPrio">Medium</label>
+            <input type="checkbox" id="mediumPrio" name="mediumPrio">
+        <label for="lowPrio">Low</label>
+            <input type="checkbox" id="lowPrio" name="lowPrio">
+        <span onclick="" class="addBtn">Add</span>
+    </form>
+    <ul class="myUL" >
+        <li>
+            <h4>Cs 146 Assignment</h4>
+            <p>Due: 11/22/2022</p>
+            <p>High Priority</p>
+        </li>
+        <li>
+            <h4>Study for final</h4>
+            <p>Due: 12/12/2022</p>
+            <p>Low Priority</p>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3>Misc</h3>
+    <form>
+        <h4>Add New Task</h4>
+            <input type="text" id="myInput" placeholder="Task...">
+        <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+        <p>Priority Level:</p>
+        <label for="highPrio">High</label>
+            <input type="checkbox" id="highPrio" name="highPrio">
+        <label for="mediumPrio">Medium</label>
+            <input type="checkbox" id="mediumPrio" name="mediumPrio">
+        <label for="lowPrio">Low</label>
+            <input type="checkbox" id="lowPrio" name="lowPrio">
+        <span onclick="" class="addBtn">Add</span>
+    </form>
+    <ul class="myUL" >
+        <li>
+            <h4>Call Mom</h4>
+            <p>Due: 11/24/2022</p>
+            <p>Low Priority</p>
+        </li>
     </ul>
 </div>
 
 </body>
 </html>
-
-<script>
-    var myNodelist = document.getElementsByTagName("LI");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-    }
-
-    // Click on a close button to hide the current list item
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-    }
-
-    // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-    }
-    }, false);
-
-    // Create a new list item when clicking on the "Add" button
-    function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("You must write something!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-        }
-    }
-    }
-</script>
