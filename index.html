@@ -8,7 +8,7 @@
 <header>
     <div class="container">
         <div class="image">
-            <h1>To-Done List Maker </h1>
+            <h1>To-Done List Maker</h1>
         </div>
         <div class="text">
            <!-- <img class ="signIn" src="https://static.vecteezy.com/system/resources/thumbnails/007/407/996/small/user-icon-person-icon-client-symbol-login-head-sign-icon-design-vector.jpg" alt = "signIN" usemap="#workmap"> -->
@@ -17,11 +17,13 @@
             </map>
         </div>
     </div>
-    <hav>
-        <a href="#">Home</a> |
-        <a href="signUp.html">Sign Up</a> |
-        <a href="login.html">Login</a>
-    </hav>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="signUp.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
 </header>
 <body>
 
@@ -38,111 +40,117 @@
     
     <label for="filter">Filter By:</label>
     <select name="filter" id="filter">
-    <option value="byPrio">By Priority</option>
-    <option value="byDate">By Due Date</option>
+    <option value="byPrio">Priority</option>
+    <option value="byDate">Due Date</option>
     </select>
-    
-    <div class="list">
-        <h3 class="listTitle">Chores</h3>
-        <span onclick="" class="closeList">X</span>
-        <div>
-            <form>
-                <h4>Add New Task</h4>
-                    <input type="text" id="myInput" placeholder="Task...">
-                <label for="dueDate">Due Date:</label>
-                    <input type="date" id="dueDate" name="dueDate">
-                <p>Priority Level:</p>
-                <label for="highPrio">High</label>
-                    <input type="checkbox" id="highPrio" name="highPrio">
-                <label for="mediumPrio">Medium</label>
-                    <input type="checkbox" id="mediumPrio" name="mediumPrio">
-                <label for="lowPrio">Low</label>
-                    <input type="checkbox" id="lowPrio" name="lowPrio">
-                <span onclick="" class="addBtn">Add</span>
-            </form>
+    <div class="row">
+        <div class="column">
+            <div class="list">
+                <h3 class="listTitle">Chores</h3>
+                <span onclick="" class="closeList">X</span>
+                <div>
+                    <form>
+                        <h4>Add New Task</h4>
+                        <label for="taskName">Name:</label>
+                            <input type="text" id="taskName" name="taskName" placeholder="Task...">
+                        <label for="dueDate">Due Date:</label>
+                            <input type="date" id="dueDate" name="dueDate">
+                        <p>Priority Level:</p>
+                        <label for="highPrio">High</label>
+                            <input type="checkbox" id="highPrio" name="highPrio">
+                        <label for="mediumPrio">Medium</label>
+                            <input type="checkbox" id="mediumPrio" name="mediumPrio">
+                        <label for="lowPrio">Low</label>
+                            <input type="checkbox" id="lowPrio" name="lowPrio">
+                        <span onclick="" class="addBtn">Add</span>
+                    </form>
+                </div>    
+                <div class="innerCard">
+                    <ul class="myUL" >
+                        <li>
+                            <h4 class="taskTitle">Do the dishes</h4>
+                            <p>Due: 11/23/2022</p>
+                            <p id="mediumPrio">Medium Priority</p>
+                            <span onclick="" class="closeTask">X</span>
+                        </li>
+            
+                        <li>
+                            <h4 class="taskTitle">Buy toliet paper</h4>
+                            <p>Due: 11/23/2022</p>
+                            <p id="mediumPrio">Medium Priority</p>
+                            <span onclick="" class="closeTask">X</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        <div class="column">
+            <div class="list">
+                <h3 class="listTitle">Homework</h3>
+                <span onclick="" class="closeList">X</span>
+                <form>
+                    <h4>Add New Task</h4>
+                    <label for="taskName">Name:</label>
+                    <input type="text" id="taskName" name="taskName" placeholder="Task...">
+                    <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate">
+                    <p>Priority Level:</p>
+                    <label for="highPrio">High</label>
+                        <input type="checkbox" id="highPrio" name="highPrio">
+                    <label for="mediumPrio">Medium</label>
+                        <input type="checkbox" id="mediumPrio" name="mediumPrio">
+                    <label for="lowPrio">Low</label>
+                        <input type="checkbox" id="lowPrio" name="lowPrio">
+                    <span onclick="" class="addBtn">Add</span>
+                </form>
+                <div class="innerCard">
+                <ul class="myUL" >
+                        <li>
+                            <h4 class="taskTitle">Cs 146 Assignment</h4>
+                            <p>Due: 11/22/2022</p>
+                            <p id="highPrio">High Priority</p>
+                            <span onclick="" class="closeTask">X</span>
+                        </li>
+                        <li>
+                            <h4 class="taskTitle">Study for final</h4>
+                            <p>Due: 12/12/2022</p>
+                            <p id="lowPrio">Low Priority</p>
+                            <span onclick="" class="closeTask">X</span>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
         </div>
-        
-        <div class="innerCard">
-            <ul class="myUL" >
-                <li>
-                    <h4 class="taskTitle">Do the dishes</h4>
-                    <p>Due: 11/23/2022</p>
-                    <p id="mediumPrio">Medium Priority</p>
-                    <span onclick="" class="closeTask">X</span>
-                </li>
-    
-                <li>
-                    <h4 class="taskTitle">Buy toliet paper</h4>
-                    <p>Due: 11/23/2022</p>
-                    <p id="mediumPrio">Medium Priority</p>
-                    <span onclick="" class="closeTask">X</span>
-                </li>
-            </ul>
-        </div>
-        
-    </div>
-    
-    <div class="list">
-        <h3 class="listTitle">Homework</h3>
-        <span onclick="" class="closeList">X</span>
-        <form>
-            <h4>Add New Task</h4>
-                <input type="text" id="myInput" placeholder="Task...">
-            <label for="dueDate">Due Date:</label>
-                <input type="date" id="dueDate" name="dueDate">
-            <p>Priority Level:</p>
-            <label for="highPrio">High</label>
-                <input type="checkbox" id="highPrio" name="highPrio">
-            <label for="mediumPrio">Medium</label>
-                <input type="checkbox" id="mediumPrio" name="mediumPrio">
-            <label for="lowPrio">Low</label>
-                <input type="checkbox" id="lowPrio" name="lowPrio">
-            <span onclick="" class="addBtn">Add</span>
-        </form>
-        <div class="innerCard">
-           <ul class="myUL" >
-                <li>
-                    <h4 class="taskTitle">Cs 146 Assignment</h4>
-                    <p>Due: 11/22/2022</p>
-                    <p id="highPrio">High Priority</p>
-                    <span onclick="" class="closeTask">X</span>
-                </li>
-                <li>
-                    <h4 class="taskTitle">Study for final</h4>
-                    <p>Due: 12/12/2022</p>
-                    <p id="lowPrio">Low Priority</p>
-                    <span onclick="" class="closeTask">X</span>
-                </li>
-            </ul> 
-        </div>
-    </div>
-    
-    <div class="list">
-        <h3 class="listTitle">Misc</h3>
-        <span onclick="" class="closeList">X</span>
-        <form>
-            <h4>Add New Task</h4>
-                <input type="text" id="myInput" placeholder="Task...">
-            <label for="dueDate">Due Date:</label>
-                <input type="date" id="dueDate" name="dueDate">
-            <p>Priority Level:</p>
-            <label for="highPrio">High</label>
-                <input type="checkbox" id="highPrio" name="highPrio">
-            <label for="mediumPrio">Medium</label>
-                <input type="checkbox" id="mediumPrio" name="mediumPrio">
-            <label for="lowPrio">Low</label>
-                <input type="checkbox" id="lowPrio" name="lowPrio">
-            <span onclick="" class="addBtn">Add</span>
-        </form>
-        <div class="innerCard">
-            <ul class="myUL" >
-                <li>
-                    <h4 class="taskTitle">Call Mom</h4>
-                    <p>Due: 11/24/2022</p>
-                    <p id="lowPrio">Low Priority</p>
-                    <span onclick="" class="closeTask">X</span>
-                </li>
-            </ul>
+        <div class="column">  
+            <div class="list">
+                <h3 class="listTitle">Misc</h3>
+                <span onclick="" class="closeList">X</span>
+                <form>
+                    <h4>Add New Task</h4>
+                    <label for="taskName">Name:</label>
+                    <input type="text" id="taskName" name="taskName" placeholder="Task...">
+                    <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate">
+                    <p>Priority Level:</p>
+                    <label for="highPrio">High</label>
+                        <input type="checkbox" id="highPrio" name="highPrio">
+                    <label for="mediumPrio">Medium</label>
+                        <input type="checkbox" id="mediumPrio" name="mediumPrio">
+                    <label for="lowPrio">Low</label>
+                        <input type="checkbox" id="lowPrio" name="lowPrio">
+                    <span onclick="" class="addBtn">Add</span>
+                </form>
+                <div class="innerCard">
+                    <ul class="myUL" >
+                        <li>
+                            <h4 class="taskTitle">Call Mom</h4>
+                            <p>Due: 11/24/2022</p>
+                            <p id="lowPrio">Low Priority</p>
+                            <span onclick="" class="closeTask">X</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     

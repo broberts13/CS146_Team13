@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
 }
 
 body {
@@ -10,6 +11,30 @@ body {
 header {
   background-color: #54acfe;
   font-size: 21px;
+}
+
+header h1{
+  color: white;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #54acfe;
+}
+
+nav li{
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 
