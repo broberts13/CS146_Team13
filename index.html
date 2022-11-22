@@ -37,9 +37,15 @@
         </div>
     </div>
     
+    <label for="filter">Filter By:</label>
+    <select name="filter" id="filter">
+    <option value="byPrio">By Priority</option>
+    <option value="byDate">By Due Date</option>
+    </select>
     
     <div class="list">
         <h3 class="listTitle">Chores</h3>
+        <span onclick="" class="closeList">X</span>
         <div>
             <form>
                 <h4>Add New Task</h4>
@@ -57,20 +63,20 @@
             </form>
         </div>
         
-        <div class="container">
+        <div class="innerCard">
             <ul class="myUL" >
                 <li>
                     <h4 class="taskTitle">Do the dishes</h4>
                     <p>Due: 11/23/2022</p>
-                    <p>Medium Priority</p>
-                    <span onclick="" class="close">X</span>
+                    <p id="mediumPrio">Medium Priority</p>
+                    <span onclick="" class="closeTask">X</span>
                 </li>
     
                 <li>
                     <h4 class="taskTitle">Buy toliet paper</h4>
                     <p>Due: 11/23/2022</p>
-                    <p>Medium Priority</p>
-                    <span onclick="" class="close">X</span>
+                    <p id="mediumPrio">Medium Priority</p>
+                    <span onclick="" class="closeTask">X</span>
                 </li>
             </ul>
         </div>
@@ -79,6 +85,7 @@
     
     <div class="list">
         <h3 class="listTitle">Homework</h3>
+        <span onclick="" class="closeList">X</span>
         <form>
             <h4>Add New Task</h4>
                 <input type="text" id="myInput" placeholder="Task...">
@@ -93,19 +100,19 @@
                 <input type="checkbox" id="lowPrio" name="lowPrio">
             <span onclick="" class="addBtn">Add</span>
         </form>
-        <div class="container">
+        <div class="innerCard">
            <ul class="myUL" >
                 <li>
                     <h4 class="taskTitle">Cs 146 Assignment</h4>
                     <p>Due: 11/22/2022</p>
-                    <p>High Priority</p>
-                    <span onclick="" class="close">X</span>
+                    <p id="highPrio">High Priority</p>
+                    <span onclick="" class="closeTask">X</span>
                 </li>
                 <li>
                     <h4 class="taskTitle">Study for final</h4>
                     <p>Due: 12/12/2022</p>
-                    <p>Low Priority</p>
-                    <span onclick="" class="close">X</span>
+                    <p id="lowPrio">Low Priority</p>
+                    <span onclick="" class="closeTask">X</span>
                 </li>
             </ul> 
         </div>
@@ -113,6 +120,7 @@
     
     <div class="list">
         <h3 class="listTitle">Misc</h3>
+        <span onclick="" class="closeList">X</span>
         <form>
             <h4>Add New Task</h4>
                 <input type="text" id="myInput" placeholder="Task...">
@@ -127,13 +135,13 @@
                 <input type="checkbox" id="lowPrio" name="lowPrio">
             <span onclick="" class="addBtn">Add</span>
         </form>
-        <div class="container">
+        <div class="innerCard">
             <ul class="myUL" >
                 <li>
                     <h4 class="taskTitle">Call Mom</h4>
                     <p>Due: 11/24/2022</p>
-                    <p>Low Priority</p>
-                    <span onclick="" class="close">X</span>
+                    <p id="lowPrio">Low Priority</p>
+                    <span onclick="" class="closeTask">X</span>
                 </li>
             </ul>
         </div>
