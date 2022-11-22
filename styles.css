@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 7;
+  padding: 0;
 }
 
 body {
@@ -15,4 +15,11 @@ header {
 .myUL {
 border: 1px solid black;
 
+}
+.signIn {
+  display: square;
+  margin-left: 98%;
+  float: right;
+  width: 40px;
+  height:40px;
 }
