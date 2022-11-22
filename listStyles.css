@@ -1,14 +1,12 @@
 
 
   .list {
-    /* Add shadows to create the "card" effect */
+    /*card*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    max-width: 300px;
     padding: 30px;
+    background-color: #54acfe53;
   }
   
-  /* Add some padding inside the card container */
   .innerCard {
     padding: 2px 16px;
   }
@@ -35,4 +33,26 @@
 
   #highPrio {
     color: red
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  .row {margin: 0 -5px;}
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
