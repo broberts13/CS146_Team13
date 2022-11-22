@@ -25,3 +25,14 @@ border: 1px solid black;
   width: 40px;
   height:40px;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
