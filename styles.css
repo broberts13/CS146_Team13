@@ -8,6 +8,11 @@ body {
 }
 
 header {
-  background-color: green;
+  background-color: #FF0000;
   font-size: 21px;
+}
+
+.myUL {
+border: 1px solid black;
+
 }
