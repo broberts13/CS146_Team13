@@ -7,6 +7,10 @@
     padding: 30px;
     background-color: #54acfe53;
   }
+
+  ul {
+    list-style-type:none;
+  }
   
   .innerCard {
     padding: 2px 16px;
@@ -14,13 +18,13 @@
 
   .addBtn {
     padding: 5px;
-    width: 10%;
+    width: auto;
     background: #54acfe;
     text-align: center;
-    font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+    border-style: none;
   }
 
   .closeTask{
@@ -43,15 +47,15 @@
     border-radius: 0;
   }
 
-  #lowPrio {
+  .lowPrio {
     color: green
   }
 
-  #mediumPrio {
+  .mediumPrio {
     color: goldenrod;
   }
 
-  #highPrio {
+  .highPrio {
     color: red
   }
 
@@ -82,13 +86,22 @@
     padding: 15px;
   }
 
-  .collapsible {
+  .collapsibleFormButton {
     padding: 5px;
-    width: 8%;
+    width: auto;
     background: #54acfe;
     text-align: center;
     border-style: none;
     cursor: pointer;
+  }
+
+  #newListDiv {
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #54acfe53;
+
   }
 
   .filterBar {
@@ -101,4 +114,10 @@
     padding: 5px;
     margin:8px;
   }
+
+  .taskTitle{
+    text-decoration: none;
+  }
+  
+
 }

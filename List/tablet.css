@@ -14,13 +14,13 @@
 
   .addBtn {
     padding: 5px;
-    width: 10%;
+    width: auto;
     background: #54acfe;
     text-align: center;
-    font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+    border-style: none;
   }
 
   .closeTask{
@@ -82,9 +82,15 @@
     padding: 15px;
   }
 
-  .collapsible {
+  #newListDiv {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+
+  .collapsibleFormButton {
     padding: 5px;
-    width: 8%;
+    width: auto;
     background: #54acfe;
     text-align: center;
     border-style: none;
