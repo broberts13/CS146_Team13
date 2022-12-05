@@ -1,11 +1,14 @@
 @media only screen and (max-width:480px) 
 { 
-  
-.list {
+  .list {
     /*card*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 30px;
     background-color: #54acfe53;
+  }
+
+  ul {
+    list-style-type:none;
   }
   
   .innerCard {
@@ -43,19 +46,19 @@
     border-radius: 0;
   }
 
-  #lowPrio {
+  .lowPrio {
     color: green
   }
 
-  #mediumPrio {
+  .mediumPrio {
     color: goldenrod;
   }
 
-  #highPrio {
+  .highPrio {
     color: red
   }
 
-  @media screen and (max-width: 480) {
+  @media screen and (max-width: 800px) {
     .column {
       width: 100%;
       display: block;
@@ -82,12 +85,6 @@
     padding: 15px;
   }
 
-  #newListDiv {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-  } 
-
   .collapsibleFormButton {
     padding: 5px;
     width: auto;
@@ -97,8 +94,29 @@
     cursor: pointer;
   }
 
+  #newListDiv {
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #54acfe53;
+
+  }
+
   .filterBar {
     text-align: center;
     padding: 15px;
   }
+
+  .newTask {
+    background-color: #54acfe53;
+    padding: 5px;
+    margin:8px;
+  }
+
+  .taskTitle{
+    text-decoration: none;
+  }
+  
+
 }

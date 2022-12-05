@@ -20,13 +20,6 @@
             </map>
         </div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="signUp.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
 </header>
 <body>
 
@@ -47,9 +40,10 @@
     </div>
     <div class="filterBar">
         <label for="filter">Filter By:</label>
-        <select name="filter" id="filter">
-        <option value="byPrio">Priority</option>
-        <option value="byDate">Due Date</option>
+        <select name="filter" id="filter" onclick="filter()">
+            <option value="none">Select...</option>
+            <option value="byPrio">Priority</option>
+            <option value="byDate">Due Date</option>
         </select>
     </div>
     
@@ -84,20 +78,19 @@
                 </div>    
                 <div class="innerCard">
                     <ul class="myUL" id="chores">
-                        <li>
+                        <li class="2">
                             <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
                                 <h4 class="taskTitle">Do the dishes</h4>
                                 <span onclick="closeTask(this)" class="closeTask">X</span>
-                                <p>Due: 2022-12-05</p>
+                                <p class="date">Due: 2022-12-05</p>
                                 <p class="mediumPrio">Medium Priority</p> 
-                     
                         </li>
-                        <li>
+                        <li class="1">
                             <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
                             <h4 class="taskTitle">Buy toliet paper</h4>
                             <span onclick="closeTask(this)" class="closeTask">X</span>
-                            <p>Due: 2022-12-05</p>
-                            <p class="mediumPrio">Medium Priority</p>
+                            <p class="date">Due: 2022-12-01</p>
+                            <p class="highPrio">High Priority</p>
                         </li>
                     </ul>
                 </div>

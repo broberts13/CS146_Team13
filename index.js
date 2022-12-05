@@ -84,6 +84,7 @@ function createTask(form){
     let taskName = form.taskName.value;
     let date = form.dueDate.value;
     let prioText = "";
+    let rank = 0;
 
     if(taskName == ""){
         alert("Task name must be filled out!");
@@ -95,27 +96,81 @@ function createTask(form){
     }
     else {
         if(prio == "highPrio"){
-            prioText = "High Priority"
+            prioText = "High Priority";
+            rank = 1;
         }
         else if(prio == "mediumPrio"){
-            prioText = "Medium Priority"
+            prioText = "Medium Priority";
+            rank = 2;
         }
         else{
             prioText = "Low Priority"
+            rank = 3;
         }
         //console.log(listName, prio, taskName, date)
         let list = document.getElementById(listName)
-        let html = ` <li>
+        let html = ` <li class="${rank}">
                         <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
                             <h4 class="taskTitle">${taskName}</h4>
                             <span onclick="closeTask(this)" class="closeTask">X</span>
-                            <p>Due: ${date}</p>
+                            <p class="date">Due: ${date}</p>
                             <p class="${prio}">${prioText}</p> 
                 
                     </li>`
 
         list.insertAdjacentHTML("afterbegin", html);
     }
+}
 
+function filter(){
+    let choice = document.getElementById("filter").value;
+    if(choice == "byPrio"){
+        byPrio();
+    }
+    else if(choice == "byDate"){
+        byDate();
+    }
+    else{
+        return;
+    }
+}
 
+function byPrio(){
+    let lists = document.getElementsByClassName("myUL");
+
+    for(let i = 0; i < lists.length; i++){
+        let sort = [];
+        let tasks = lists[i].getElementsByTagName('li');
+
+        for(let j = 0; j < tasks.length; j++){
+            //console.log(tasks[j]);
+            sort.push({"prio": parseInt(tasks[j].className), "html": tasks[j].outerHTML});
+        }
+        sort.sort((a, b) => (a.prio > b.prio) ? 1 : -1);
+        lists[i].innerHTML="";
+        for(let j = 0; j < sort.length; j++){
+            lists[i].insertAdjacentHTML("beforeEnd", sort[j].html);
+        }
+    }
+
+}
+
+function byDate(){
+    let lists = document.getElementsByClassName("myUL");
+    for(let i = 0; i < lists.length; i++){
+        let sort = [];
+        let tasks = lists[i].getElementsByTagName('li');
+
+        for(let j = 0; j < tasks.length; j++){
+            //console.log(tasks[j]);
+            let datetag = tasks[j].getElementsByClassName("date");
+            let date = datetag[0].innerText.slice(4);
+            sort.push({"date": new Date(date), "html": tasks[j].outerHTML});
+        }
+        sort.sort((a, b) => (a.date > b.date) ? 1 : -1);
+        lists[i].innerHTML="";
+        for(let j = 0; j < sort.length; j++){
+            lists[i].insertAdjacentHTML("beforeEnd", sort[j].html);
+        }
+    }
 }
