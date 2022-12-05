@@ -118,6 +118,18 @@
   .taskTitle{
     text-decoration: none;
   }
-  
 
+  .pageTitle{
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .titleImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+  }
 }
