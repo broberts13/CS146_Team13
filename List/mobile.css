@@ -26,6 +26,10 @@
     border-style: none;
   }
 
+  button:hover {
+    background: #276daf;
+  }
+
   .closeTask{
     float:right;
     cursor: pointer;
@@ -44,6 +48,10 @@
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+  }
+
+  span:hover {
+    background: #276daf;
   }
 
   .lowPrio {

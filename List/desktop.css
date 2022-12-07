@@ -17,6 +17,10 @@
     padding: 2px 16px;
   }
 
+  button:hover {
+    background: #276daf;
+  }
+
   .addBtn {
     padding: 5px;
     width: auto;
@@ -36,6 +40,10 @@
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+  }
+
+  span:hover {
+    background: #276daf;
   }
 
   .closeList{
