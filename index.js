@@ -38,6 +38,10 @@ function createList(form){
         alert("List name must be filled out!");
         return false;
     }
+    else if (document.getElementById(input)){
+        alert("That list already exists!");
+        return false;
+    }
     else{
         let row = document.getElementsByClassName("row");
         let html = `<div class="column">
