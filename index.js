@@ -116,11 +116,12 @@ function createTask(form){
         let list = document.getElementById(listName)
         let html = ` <li class="${rank}">
                         <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
-                            <h4 class="taskTitle">${taskName}</h4>
+                        <div class="listItem">
                             <span onclick="closeTask(this)" class="closeTask">X</span>
+                            <h4 class="taskTitle">${taskName}</h4>
                             <p class="date">Due: ${date}</p>
                             <p class="${prio}">${prioText}</p> 
-                
+                        </div>
                     </li>`
 
         list.insertAdjacentHTML("afterbegin", html);

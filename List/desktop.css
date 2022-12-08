@@ -1,8 +1,5 @@
-@media only screen and (min-width: 769px) 
-{ 
-
   /* grid for cards*/
-  @media (min-width: 900px) {
+  @media (min-width:769px) {
     .container { grid-template-columns: repeat(3, 1fr); }
   }
 
@@ -27,6 +24,29 @@
   
   .innerCard {
     padding: 2px 16px;
+  }
+
+  .newTask {
+    background-color: #54acfe53;
+    padding: 10px;
+    margin:10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .taskTitle{
+    text-decoration: none;
+  }
+
+  li{
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .listItem{
+    display: inline-block; 
+    vertical-align: top;
+    width:90%;
   }
 
 
@@ -86,7 +106,7 @@
     color: red;
   }
 
-
+  /* new list */
   .newListCollapse {
     text-align: center;
     padding: 15px;
@@ -105,24 +125,11 @@
     padding: 20px;
     display: none;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #54acfe53;
-
   }
 
   .filterBar {
     text-align: center;
     padding: 15px;
-  }
-
-  .newTask {
-    background-color: #54acfe53;
-    padding: 5px;
-    margin:8px;
-  }
-
-  .taskTitle{
-    text-decoration: none;
   }
 
   .pageTitle{
@@ -138,4 +145,3 @@
     height: auto;
     padding: 5px;
   }
-}

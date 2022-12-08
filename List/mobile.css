@@ -1,5 +1,4 @@
-@media only screen and (max-width:480px) 
-{ 
+
 
   /* grid for cards*/
   .list {
@@ -10,10 +9,18 @@
     margin: 10px;
   }
 
-  @media (min-width: 400px) {
-    .container { grid-template-columns: repeat(1, 1fr); }
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
   }
 
+  @media (min-width: 900px) {
+    .container { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* styling for inside cards */
   ul.myUL {
     list-style-type:none;
   }
@@ -21,7 +28,31 @@
   .innerCard {
     padding: 2px 16px;
   }
+  
+  .newTask {
+    background-color: #54acfe53;
+    padding: 5px;
+    margin:8px;
+  }
 
+  .taskTitle{
+    text-decoration: none;
+  }
+
+  li{
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .listItem{
+    display: inline-block; 
+    vertical-align: top;
+    width:90%;
+  }
+
+
+/* button and span styles */
   button:hover {
     background: #276daf;
   }
@@ -41,11 +72,12 @@
   .closeTask{
     float:right;
     cursor: pointer;
-    padding: 5px;
+    padding: 3px;
     width: 8%;
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
   span:hover {
@@ -55,15 +87,17 @@
   .closeList{
     cursor: pointer;
     float:right;
-    padding: 5px;
+    padding: 3px;
     width: 8%;
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
+  /* tag styles */ 
   .lowPrio {
-    color: green
+    color: green;
   }
 
   .mediumPrio {
@@ -71,17 +105,10 @@
   }
 
   .highPrio {
-    color: red
+    color: red;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-  }
-
-
+  /* new list */
   .newListCollapse {
     text-align: center;
     padding: 15px;
@@ -100,24 +127,11 @@
     padding: 20px;
     display: none;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #54acfe53;
-
   }
 
   .filterBar {
     text-align: center;
     padding: 15px;
-  }
-
-  .newTask {
-    background-color: #54acfe53;
-    padding: 5px;
-    margin:8px;
-  }
-
-  .taskTitle{
-    text-decoration: none;
   }
 
   .pageTitle{
@@ -133,4 +147,3 @@
     height: auto;
     padding: 5px;
   }
-}

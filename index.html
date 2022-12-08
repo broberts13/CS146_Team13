@@ -5,8 +5,7 @@
     <link rel = "stylesheet" href="styles.css">
     <link rel = "stylesheet" href="List/desktop.css" media="screen and (min-width:769px)">
     <link rel = "stylesheet" href="List/mobile.css" media="screen and (max-width:480px)">
-    <link rel = "stylesheet" href="List/tablet.css" media="screen and (min-width:481px) 
-    and (max-width:768px)">
+    <link rel = "stylesheet" href="List/tablet.css" media="screen and (min-width:481px) and (max-width:768px)">
 </head>
 <header>
         <div class="image">
@@ -72,17 +71,23 @@
                 <ul class="myUL" id="chores">
                     <li class="2">
                         <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
-                            <h4 class="taskTitle">Do the dishes</h4>
+                        <div class="listItem">
                             <span onclick="closeTask(this)" class="closeTask">X</span>
+                            <h4 class="taskTitle">Do the dishes</h4>
                             <p class="date">Due: 2022-12-05</p>
-                            <p class="mediumPrio">Medium Priority</p> 
+                            <p class="mediumPrio">Medium Priority</p>
+                        </div>
+                             
                     </li>
                     <li class="1">
                         <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
-                        <h4 class="taskTitle">Buy toliet paper</h4>
-                        <span onclick="closeTask(this)" class="closeTask">X</span>
-                        <p class="date">Due: 2022-12-01</p>
-                        <p class="highPrio">High Priority</p>
+                        <div class="listItem">
+                            <span onclick="closeTask(this)" class="closeTask">X</span>
+                            <h4 class="taskTitle">Buy toliet paper</h4>
+                            <p class="date">Due: 2022-12-01</p>
+                            <p class="highPrio">High Priority</p>
+                        </div>
+                        
                     </li>
                 </ul>
             </div>
