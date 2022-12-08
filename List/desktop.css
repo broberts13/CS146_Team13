@@ -1,14 +1,26 @@
 @media only screen and (min-width: 769px) 
 { 
 
-.list {
+  /* grid for cards*/
+  @media (min-width: 900px) {
+    .container { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  .list {
     /*card*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 30px;
     background-color: #54acfe53;
-    margin-top: 10px;
+    margin: 10px;
   }
 
+  /* styling for inside cards */
   ul.myUL {
     list-style-type:none;
   }
@@ -17,6 +29,8 @@
     padding: 2px 16px;
   }
 
+
+/* button and span styles */
   button:hover {
     background: #276daf;
   }
@@ -30,16 +44,18 @@
     transition: 0.3s;
     border-radius: 0;
     border-style: none;
+    margin: 10px;
   }
 
   .closeTask{
     float:right;
     cursor: pointer;
-    padding: 5px;
+    padding: 3px;
     width: 8%;
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
   span:hover {
@@ -49,15 +65,17 @@
   .closeList{
     cursor: pointer;
     float:right;
-    padding: 5px;
+    padding: 3px;
     width: 8%;
     background: #54acfe;
     text-align: center;
     border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
+  /* tag styles */ 
   .lowPrio {
-    color: green
+    color: green;
   }
 
   .mediumPrio {
@@ -65,23 +83,7 @@
   }
 
   .highPrio {
-    color: red
-  }
-
-  @media (min-width: 600px) {
-    .container { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 900px) {
-    .container { grid-template-columns: repeat(3, 1fr); }
-  }
-
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
+    color: red;
   }
 
 

@@ -1,19 +1,30 @@
 @media only screen and (min-width: 481px) 
     and (max-width: 768px)
 { 
+
+  /* grid for cards*/
   .list {
     /*card*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 30px;
     background-color: #54acfe53;
+    margin: 10px;
   }
 
-  ul {
+  @media (min-width: 600px) {
+    .container { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  ul.myUL {
     list-style-type:none;
   }
   
   .innerCard {
     padding: 2px 16px;
+  }
+
+  button:hover {
+    background: #276daf;
   }
 
   .addBtn {
@@ -25,10 +36,7 @@
     transition: 0.3s;
     border-radius: 0;
     border-style: none;
-  }
-
-  button:hover {
-    background: #276daf;
+    margin: 10px;
   }
 
   .closeTask{
@@ -41,6 +49,10 @@
     border-radius: 0;
   }
 
+  span:hover {
+    background: #276daf;
+  }
+
   .closeList{
     cursor: pointer;
     float:right;
@@ -49,10 +61,6 @@
     background: #54acfe;
     text-align: center;
     border-radius: 0;
-  }
-
-  span:hover {
-    background: #276daf;
   }
 
   .lowPrio {
@@ -67,30 +75,14 @@
     color: red
   }
 
-  @media screen and (max-width: 700px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
   }
 
-  .column {
-    float: left;
-    width: 31%;
-    padding: 10px;
-  }
-
-  .row {
-    margin: 10px;
-    margin-left: 30px;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
   .newListCollapse {
     text-align: center;
@@ -143,6 +135,5 @@
     height: auto;
     padding: 5px;
   }
-  
 
 }
