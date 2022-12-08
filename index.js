@@ -43,42 +43,43 @@ function createList(form){
         return false;
     }
     else{
-        let row = document.getElementsByClassName("row");
-        let html = `<div class="column">
-                        <div class="list">
-                            <span onclick="closeList(this)" class="closeList">X</span>
-                            <h3 class="listTitle">${input}</h3>
-                            <div>
-                                <form class="newTask">
-                                    <h4>Add New Task</h4>
-                                    <input type="hidden"  name="ulName" readonly value=${input}>
-                                    <div class="formField">
-                                        <label for="taskName">Name:</label>
-                                        <input type="text" name="taskName" placeholder="Task..." required>
-                                    </div>
-                                    <div class="formField">
-                                    <label for="dueDate">Due Date:</label>
-                                        <input type="date" name="dueDate" required> 
-                                    </div>
-                                    <div class="formField">
-                                    <p>Priority Level:</p>
-                                    <label for="highPrio">High</label>
-                                        <input type="radio" value="highPrio" name="priority" checked>
-                                    <label for="mediumPrio">Medium</label>
-                                        <input type="radio" value="mediumPrio" name="priority">
-                                    <label for="lowPrio">Low</label>
-                                        <input type="radio" value="lowPrio" name="priority">  
-                                    </div>
-                                    <button onclick="createTask(this.form)" class="addBtn" type="button">Add</button>
-                                </form>
-                            </div>    
-                            <div class="innerCard">
-                                <ul class="myUL" id="${input}" >
-                                </ul>
-                            </div>
+        let container = document.getElementsByClassName("container");
+        console.log(container);
+        let html = `
+                    <div class="list">
+                        <span onclick="closeList(this)" class="closeList">X</span>
+                        <h3 class="listTitle">${input}</h3>
+                        <div>
+                            <form class="newTask">
+                                <h4>Add New Task</h4>
+                                <input type="hidden"  name="ulName" readonly value=${input}>
+                                <div class="formField">
+                                    <label for="taskName">Name:</label>
+                                    <input type="text" name="taskName" placeholder="Task..." required>
+                                </div>
+                                <div class="formField">
+                                <label for="dueDate">Due Date:</label>
+                                    <input type="date" name="dueDate" required> 
+                                </div>
+                                <div class="formField">
+                                <p>Priority Level:</p>
+                                <label for="highPrio">High</label>
+                                    <input type="radio" value="highPrio" name="priority" checked>
+                                <label for="mediumPrio">Medium</label>
+                                    <input type="radio" value="mediumPrio" name="priority">
+                                <label for="lowPrio">Low</label>
+                                    <input type="radio" value="lowPrio" name="priority">  
+                                </div>
+                                <button onclick="createTask(this.form)" class="addBtn" type="button">Add</button>
+                            </form>
+                        </div>    
+                        <div class="innerCard">
+                            <ul class="myUL" id="${input}" >
+                            </ul>
                         </div>
-                    </div>  `   
-        row[0].insertAdjacentHTML("afterbegin", html);
+                    </div>
+                `   
+        container[0].insertAdjacentHTML("afterbegin", html);
     }
 }
 

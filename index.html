@@ -9,11 +9,9 @@
     and (max-width:768px)">
 </head>
 <header>
-    <div class="container">
         <div class="image">
             <h1>To-Done List Maker</h1>
         </div>
-    </div>
 </header>
 <body>
 
@@ -42,58 +40,54 @@
             <option value="byDate">Due Date</option>
         </select>
     </div>
-    
-    <div class="row">
-        <div class="column">
-            <div class="list">
-                <span onclick="closeList(this)" class="closeList">X</span>
-                <h3 class="listTitle">Chores</h3>
-                <div>
-                    <form class="newTask">
-                        <h4>Add New Task</h4>
-                        <input type="hidden" name="ulName" readonly value="chores">
-                        <div class="formField">
-                            <label for="taskName">Name:</label>
-                            <input type="text" name="taskName" placeholder="Task..." required>
-                        </div>
-                        <div class="formField">
-                           <label for="dueDate">Due Date:</label>
-                            <input type="date" name="dueDate" required> 
-                        </div>
-                        <div class="formField">
-                          <p>Priority Level:</p>
-                        <label for="highPrio">High</label>
-                            <input type="radio" value="highPrio" name="priority" checked>
-                        <label for="mediumPrio">Medium</label>
-                            <input type="radio" value="mediumPrio" name="priority">
-                        <label for="lowPrio">Low</label>
-                            <input type="radio" value="lowPrio" name="priority">  
-                        </div>
-                        <button onclick="createTask(this.form)" class="addBtn" type="button">Add</button>
-                    </form>
-                </div>    
-                <div class="innerCard">
-                    <ul class="myUL" id="chores">
-                        <li class="2">
-                            <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
-                                <h4 class="taskTitle">Do the dishes</h4>
-                                <span onclick="closeTask(this)" class="closeTask">X</span>
-                                <p class="date">Due: 2022-12-05</p>
-                                <p class="mediumPrio">Medium Priority</p> 
-                        </li>
-                        <li class="1">
-                            <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
-                            <h4 class="taskTitle">Buy toliet paper</h4>
+    <div class="container">
+        <div class="list">
+            <span onclick="closeList(this)" class="closeList">X</span>
+            <h3 class="listTitle">Chores</h3>
+            <div>
+                <form class="newTask">
+                    <h4>Add New Task</h4>
+                    <input type="hidden" name="ulName" readonly value="chores">
+                    <div class="formField">
+                        <label for="taskName">Name:</label>
+                        <input type="text" name="taskName" placeholder="Task..." required>
+                    </div>
+                    <div class="formField">
+                        <label for="dueDate">Due Date:</label>
+                        <input type="date" name="dueDate" required> 
+                    </div>
+                    <div class="formField">
+                        <p>Priority Level:</p>
+                    <label for="highPrio">High</label>
+                        <input type="radio" value="highPrio" name="priority" checked>
+                    <label for="mediumPrio">Medium</label>
+                        <input type="radio" value="mediumPrio" name="priority">
+                    <label for="lowPrio">Low</label>
+                        <input type="radio" value="lowPrio" name="priority">  
+                    </div>
+                    <button onclick="createTask(this.form)" class="addBtn" type="button">Add</button>
+                </form>
+            </div>    
+            <div class="innerCard">
+                <ul class="myUL" id="chores">
+                    <li class="2">
+                        <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
+                            <h4 class="taskTitle">Do the dishes</h4>
                             <span onclick="closeTask(this)" class="closeTask">X</span>
-                            <p class="date">Due: 2022-12-01</p>
-                            <p class="highPrio">High Priority</p>
-                        </li>
-                    </ul>
-                </div>
+                            <p class="date">Due: 2022-12-05</p>
+                            <p class="mediumPrio">Medium Priority</p> 
+                    </li>
+                    <li class="1">
+                        <input type="checkbox" onclick="checkTask(this)" class="checkBoxTask">
+                        <h4 class="taskTitle">Buy toliet paper</h4>
+                        <span onclick="closeTask(this)" class="closeTask">X</span>
+                        <p class="date">Due: 2022-12-01</p>
+                        <p class="highPrio">High Priority</p>
+                    </li>
+                </ul>
             </div>
-        </div>  
-    </div>
-    
+        </div>
+    </div> 
     </body>
     <script src="index.js"></script>
 </html>
