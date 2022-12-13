@@ -1,6 +1,6 @@
 //delete the task
 function closeTask(close){
-    close.parentElement.remove();
+    close.parentElement.parentElement.remove();
 }
 
 //cross out task
